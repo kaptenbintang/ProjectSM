@@ -10,7 +10,7 @@ $(document).ready(function() {
         if (name == '' || email == '' || subject == '' || message == '') {
             alert("Please fill all fields..!!!");
         } else if (!validateEmail(email)) {
-            alert("email salah");
+            alert("Your e-mail is invalid");
         } else {
             alert("Your e-mail message was sent successfully");
             $("#contactform").trigger('reset');
