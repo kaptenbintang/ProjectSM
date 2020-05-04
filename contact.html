@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SolMusic</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body ng-app="myApps">
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header section -->
+    <header class="header-section clearfix">
+        <a href="index.html" class="site-logo">
+            <img src="img/logo.png" alt="">
+        </a>
+        <ul class="main-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Music</a></li>
+            <li><a href="blog.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <!-- Header section end -->
+
+    <!-- Contact section -->
+    <section class="contact-section" ng-controller="bintangctrl">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <!-- Map -->
+                    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2465736508325!2d106.82273031486883!3d-6.362125395396195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec18c3e8e717%3A0x9f2283e905986b55!2sCEP%20CCIT%20FTUI!5e0!3m2!1sen!2sid!4v1588060379451!5m2!1sen!2sid"
+                            style="border:0" allowfullscreen></iframe></div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="contact-warp">
+                        <div class="section-title mb-0">
+                            <h2>Get in touch</h2>
+                        </div>
+                        <p>With SolMusic, it’s easy to find the right music for every moment – on your phone, your computer, your tablet and more. There are millions of tracks on SolMusic. So whether you’re behind the wheel, working out, partying or relaxing,
+                            the right music is always at your fingertips. Choose what you want to listen to, or let SolMusic surprise you. You can also browse through the collections of friends, artists, and celebrities and just sit back. Soundtrack your
+                            life with SolMusic. Listen for free.</p>
+                        <ul>
+                            <li>Main Road, No 25/11</li>
+                            <li>+34 556788 3221</li>
+                            <li>contact@solmusic.com</li>
+                        </ul>
+                        <form class="contact-from" name="contactform" id="contactform">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div ng-show="contactform.name.$dirty && contactform.name.$invalid">
+                                        <small style="color:red;display:block; text-align:left;">*Enter Your Name</small>
+                                    </div>
+                                    <input type="text" name="name" id="name" ng-model="contact.name" required placeholder="Your name">
+                                </div>
+                                <div class="col-md-6">
+                                    <div ng-show="contactform.email.$dirty && contactform.email.$invalid">
+                                        <small style="color:red;display:block; text-align:left;">*Please enter valid email</small>
+                                    </div>
+                                    <input type="email" name="email" id="email" ng-model="contact.email" required placeholder="Your e-mail">
+                                </div>
+                                <div class="col-md-12">
+                                    <div ng-show="contactform.subject.$dirty && contactform.subject.$invalid">
+                                        <small style="color:red;display:block; text-align:left;">*Enter Your Subject</small>
+                                    </div>
+                                    <input type="text" name="subject" id="subject" ng-model="contact.subject" required placeholder="Subject">
+                                    <div ng-show="contactform.message.$dirty && contactform.message.$invalid">
+                                        <small style="color:red;display:block; text-align:left;">*Enter Your message</small>
+                                    </div>
+                                    <textarea placeholder="Message" id="message" name="message" ng-model="contact.message" required></textarea>
+                                </div>
+                                <button class="site-btn" id="send">send message</button>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Blog section end -->
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-7 order-lg-2">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="footer-widget">
+                                <h2>Company</h2>
+                                <ul>
+                                    <li><a href="contact.html">About Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="footer-widget">
+                                <h2>Products</h2>
+                                <ul>
+                                    <li><a href="category.html">Music</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="footer-widget">
+                                <h2>Blog</h2>
+                                <ul>
+                                    <li><a href="blog.html">News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-5 order-lg-1">
+                    <img src="img/logo.png" alt="">
+                    <div class="copyright">
+                        <!-- copyright -->
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved
+                        <!-- copyright -->
+                    </div>
+                    <div class="social-links">
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-pinterest"></i></a>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+    <!--====== Javascripts & Jquery ======-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("myApps", []);
+        app.controller("bintangctrl", function($scope) {});
+    </script>
+    <script src="js/bintangvalidasi.js"></script>
+    <!-- <script src="http://code.angularjs.org/1.2.6/angular.js"></script> -->
+
+</body>
+
+</html>
